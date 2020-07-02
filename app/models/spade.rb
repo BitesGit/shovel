@@ -1,0 +1,2 @@
+class Spade < ApplicationRecord
+end
