@@ -1,0 +1,5 @@
+h1 Spades
+p
+  = created_list
+  - spades[:model].each do |spade|
+    = cell(Spade::Cell::Show, spade)

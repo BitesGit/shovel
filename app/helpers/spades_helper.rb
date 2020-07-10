@@ -1,0 +1,2 @@
+module SpadesHelper
+end
