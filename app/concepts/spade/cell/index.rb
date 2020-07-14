@@ -9,7 +9,11 @@ module Spade::Cell
     end
 
     def created_list
-      spades[:model].map(&:created_at).join ', '
+      spades.map(&:created_at).join ', '
+    end
+
+    def new_spade_link
+      link_to 'New Spade', new_spade_path
     end
   end
 end

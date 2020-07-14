@@ -1,9 +1,10 @@
 module Spade::Operation
   class Create < Trailblazer::Operation
-    step :dummy
-    #step Model(Spade, :new)
-    def dummy(options, params:, **)
-      puts "DUMMy"
+    step Model(Spade, :new)
+    step :reformify
+
+    def reformify(ctx, params:, **)
+      ctx[:form] = Spade::Form::SpadeForm.new(ctx[:model])
     end
   end
 end

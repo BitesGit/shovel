@@ -1,13 +1,14 @@
 class SpadesController < ApplicationController
 
   def new
-    Spade::Operation::Create.(params: {dum: 'dummy'})
-    render html: cell(Spade::Cell::New)
+    ctx = {params: {}}
+    result = Spade::Operation::Create.(ctx) # after this op, ctx[:model] contains Spade object
+    render html: cell(Spade::Cell::New, result[:form])
   end
 
   def index
     ctx = {params: {}}
-    Spade::Operation::Index.([ctx, {}], {})
-    render html: cell(Spade::Cell::Index, ctx)
+    Spade::Operation::Index.([ctx, {}], {}) # after this op, ctx[:form] contains Reform object
+    render html: cell(Spade::Cell::Index, ctx[:model])
   end
 end

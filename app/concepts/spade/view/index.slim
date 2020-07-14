@@ -1,5 +1,7 @@
 h1 Spades
 p
   = created_list
-  - spades[:model].each do |spade|
+  - spades.each do |spade|
     = cell(Spade::Cell::Show, spade)
+br
+= new_spade_link

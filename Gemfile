@@ -58,3 +58,5 @@ gem 'slim-rails'
 gem "trailblazer-cells"
 gem 'cells-rails'
 gem 'cells-slim'
+gem 'simple_form'
+gem "dry-validation"

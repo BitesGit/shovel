@@ -3,7 +3,7 @@ module Spade::Operation
     step :collect
 
     def collect(ctx, params:, **)
-      ctx[:model] = Spade.all
+      ctx[:model] = Spade.all # insert your business logic here
     end
   end
 end

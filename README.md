@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+If you were looking for starting point with Rails (6) and Trailblazer 2.1, you are in the right place!
 
-Things you may want to cover:
+This example project will/hopefully/should contain
 
-* Ruby version
+* TRB2.1
 
-* System dependencies
+* Operations
 
-* Configuration
+* Cells
 
-* Database creation
+* Reform
 
-* Database initialization
+* Slim
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* CRUD for sample models
