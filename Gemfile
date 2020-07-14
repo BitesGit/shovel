@@ -55,9 +55,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "trailblazer-rails", "~> 2.1"
 gem 'slim-rails'
-gem "trailblazer-cells"
+gem "trailblazer-cells", '0.0.3'
+gem 'cells', '= 4.1.7'
+gem 'slim', '= 3.0.9'
 gem 'cells-rails'
-gem 'cells-slim'
+gem 'cells-slim', '~> 0.0.6'
 gem 'simple_form'
 gem "dry-validation"
 gem "reform-rails"
