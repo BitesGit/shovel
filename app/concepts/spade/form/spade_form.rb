@@ -1,7 +1,6 @@
 module Spade::Form
   class SpadeForm < Reform::Form
-    include SimpleForm::Helpers
-    include Reform::Form::ActiveModel::ModelReflections
+    include Reform::Form::ActiveModel
     property :color
     property :width
     property :length

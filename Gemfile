@@ -60,3 +60,4 @@ gem 'cells-rails'
 gem 'cells-slim'
 gem 'simple_form'
 gem "dry-validation"
+gem "reform-rails"
