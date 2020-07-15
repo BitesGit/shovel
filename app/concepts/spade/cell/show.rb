@@ -5,7 +5,7 @@ module Spade::Cell
     private
 
     def measures
-      "#{spade.length} x#{spade.width}"
+      "<div style=\"height: #{spade.length/5}px; width:#{spade.width/5}px; background: ##{spade.color};\"></div>"
     end
   end
 end

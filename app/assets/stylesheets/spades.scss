@@ -4,5 +4,14 @@
 
 .spade-cell {
   width: 30%;
-  height: 200px;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.spade-measures {
+  width: fit-content;
+  height: fit-content;
+  border: solid 3px black;
+  overflow: hidden;
+  padding: 10px;
 }
