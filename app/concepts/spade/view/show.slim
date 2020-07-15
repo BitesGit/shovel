@@ -1,9 +1,7 @@
-.col-3
-  h5 = spade.color
+.col-3.m-2
   .spade-measures
     = raw(measures)
-    = link_to 'edit', edit_spade_path(spade)
+  .spade-measures
+    = button_to 'edit', edit_spade_path(spade), method: :get
     br
-    = link_to 'delete', spade_path(spade), method: :delete
-    br
-    = link_to 'all', spades_path
+    = button_to 'delete', spade_path(spade), method: :delete

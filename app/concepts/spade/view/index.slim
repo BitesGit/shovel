@@ -10,3 +10,5 @@ h5 Spades
     = cell(Spade::Cell::Show, spade)
 .row.p-5
   = new_spade_link
+  br
+  = button_to 'all', spades_path, method: :get, class: 'm-2 btn btn-info'
