@@ -1,5 +1,5 @@
 module Spade::Cell
-  class New < Trailblazer::Cell
+  class Form < Trailblazer::Cell
     include SimpleForm::ActionViewExtensions::FormHelper
     alias spade_form model # Because of this, you can access 'spade_form' in the cell (spade/view/new.slim)
 
