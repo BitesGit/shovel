@@ -3,7 +3,7 @@ module Spade::Operation
     step :collect
 
     def collect(ctx, params:, **)
-      ctx[:model] = Spade.all # insert your business logic here
+      ctx[:spades] = Spade.all # insert your business logic here, filter or smt
     end
   end
 end
