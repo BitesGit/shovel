@@ -13,7 +13,7 @@ module Spade::Cell
     end
 
     def new_spade_link
-      link_to 'New Spade', new_spade_path
+      button_to 'New Spade', new_spade_path, method: :get, class: 'btn btn-info'
     end
   end
 end
