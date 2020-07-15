@@ -1,7 +1,11 @@
-h1 Spades
+h1 Listing
+h5 Colors
 p
   = color_list
+h5 Spades
+div style="width: 100%; display: flex"
   - spades.each do |spade|
-    = cell(Spade::Cell::Show, spade)
+    .spade-cell
+      = cell(Spade::Cell::Show, spade)
 br
 = new_spade_link
