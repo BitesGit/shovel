@@ -8,40 +8,43 @@ class SpadesController < ApplicationController
   end
 
   def new
-    result = Spade::Operation::New.(ctx) # after this op, ctx[:model] contains Spade object
-    render html: cell(Spade::Cell::New, result[:model])
+    result = Spade::Operation::New.(ctx)
+    @spade_form = result[:'contract.default']
   end
 
   def create
     result = Spade::Operation::Create.(ctx)
     if result.success?
-      redirect_to result[:model]
-    else
-      render html: cell(Spade::Cell::New, result[:'contract.default'])
+      redirect_to result[:model], alert: 'Spade created'
+      return
     end
+    @spade_form = result[:'contract.default']
+    render 'new'
   end
 
   def edit
     result = Spade::Operation::Edit.call(ctx)
-    if result.success?
-      render html: cell(Spade::Cell::Edit, result[:model])
-    else
+    unless result.success?
       redirect_to spades_path, alert: 'Spade not found'
+      return
     end
+    @spade_form = result[:'contract.default']
   end
 
   def update
     result = Spade::Operation::Update.call(ctx)
+    @spade = result[:model]
     if result.success?
-      redirect_to result[:model]
-    else
-      render_cell(Spade::Cell::Edit, result[:model])
+      redirect_to @spade
+      return
     end
+    @spade_form = result[:'contract.default']
+    render 'edit'
   end
 
   def index
     ctx = {params: {}}
-    Spade::Operation::Index.([ctx, {}], {}) # after this op, ctx[:spades] contains spades
+    Spade::Operation::Index.([ctx, {}], {})
     @spades = ctx[:spades]
   end
 

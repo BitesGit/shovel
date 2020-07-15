@@ -8,8 +8,8 @@ module Spade::Cell
       spades.count
     end
 
-    def created_list
-      spades.map(&:created_at).join ', '
+    def color_list
+      spades.map(&:color).uniq.join(', ')
     end
 
     def new_spade_link

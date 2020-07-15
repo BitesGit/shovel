@@ -1,8 +1,8 @@
 module Spade::Operation
   class Create < Trailblazer::Operation
     class Present < Trailblazer::Operation
-      step Model(Spade, :new)
-      step Contract::Build(constant: Spade::Contract)
+      step Model(Spade, :new), id: :new_spade_create_step
+      step Contract::Build(constant: Spade::SpadeForm)
     end
 
     step Subprocess(Present)

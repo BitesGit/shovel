@@ -1,4 +1,11 @@
 h1 Edit Spade
+- if errors.any?
+  .form-group
+    ul
+      - errors.each do |attr, messages|
+        - messages.each do |msg|
+          li
+            = "#{attr}: #{msg}"
 p
 = simple_form_for spade_form do |f|
   = f.input :color

@@ -1,6 +1,13 @@
 h1 New Spade
+- if errors.any?
+  .form-group
+    ul
+      - errors.each do |attr, messages|
+        - messages.each do |msg|
+          li
+            = "#{attr}: #{msg}"
 p
-= simple_form_for spade_form, url: spades_path do |f|
+= simple_form_for spade_form, url: spades_path(spade_form.model) do |f|
   = f.input :color
   = f.input :width
   = f.input :length
