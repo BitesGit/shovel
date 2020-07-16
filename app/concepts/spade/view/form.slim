@@ -1,4 +1,4 @@
-= simple_form_for spade_form do |f|
+= simple_form_for(spade_form, as: :spade, url: spades_path(spade_form)) do |f|
   = f.input :color
   = f.input :width
   = f.input :length

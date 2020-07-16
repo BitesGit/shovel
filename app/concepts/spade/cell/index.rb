@@ -9,7 +9,11 @@ module Spade::Cell
     end
 
     def color_list
-      spades.map(&:color).uniq.join(', ')
+      divs = ''
+      spades.map(&:color).uniq.each do |c|
+        divs << "<div class=\"col-2 m-2\" style=\"background: ##{c}; width: 50px; height: 50px;\"></div>"
+      end
+      divs
     end
 
     def new_spade_link
