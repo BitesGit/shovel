@@ -11,6 +11,8 @@ This example project contains
     * Cells
 
     * Reform
+        
+        * Wizard form
 
 * Slim
 

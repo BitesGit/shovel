@@ -2,6 +2,8 @@ class Spade::SpadeForm < Reform::Form
   property :color
   property :width
   property :length
+  property :product_name
+  property :cost
 
   validation do
     params do

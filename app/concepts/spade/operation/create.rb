@@ -9,5 +9,6 @@ module Spade::Operation
 
     step Contract::Validate(key: :spade)
     step Contract::Persist()
+
   end
 end

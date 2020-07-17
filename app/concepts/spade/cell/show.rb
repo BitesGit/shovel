@@ -2,8 +2,6 @@ module Spade::Cell
   class Show < Trailblazer::Cell
     alias spade model
 
-    private
-
     def to_div
       """
       <div style=\"margin-top: #{spade.width/2}px; height: 4px; border: 1px solid black; background: ##{spade.color};\"></div>
