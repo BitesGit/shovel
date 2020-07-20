@@ -21,13 +21,13 @@ module Spade::Cell
 
     def back_button
       if step_valid? and !spade_form_step.model.id.nil? and spade_form_step.step > 0
-        button_to 'Takaisin', wizard_step_url(step: spade_form_step.step - 1, id: spade_form_step.model.id), method: :get
+        button_to 'Back', wizard_step_url(step: spade_form_step.step - 1, id: spade_form_step.model.id), method: :get, class: 'm-2 btn btn-info'
       end
     end
 
     def next_button
       if !spade_form_step.is_ready? and !spade_form_step.model.id.nil? and spade_form_step.step < spade_form_step.last_step
-        button_to 'Seuraava', wizard_step_url(step: spade_form_step.step, id: spade_form_step.model.id), method: :patch
+        button_to 'Next', wizard_step_url(step: spade_form_step.step, id: spade_form_step.model.id), method: :patch, class: 'm-2 btn btn-info'
       end
     end
 

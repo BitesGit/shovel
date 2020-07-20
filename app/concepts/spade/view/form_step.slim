@@ -6,19 +6,22 @@
     = f.input :color
     = f.input :width
     = f.input :length
-    = f.submit 'Save and continue'
+    = f.submit 'Save and continue', class: 'm-2 btn btn-info'
   - elsif spade_form_step.step == 1
     .row
       .col-3.m-2
         = Spade::Cell::Show.new(spade_form_step.model).to_div
     = f.input :cost
-    = f.submit 'Save and continue'
+    = f.submit 'Save and continue', class: 'm-2 btn btn-info'
   - elsif spade_form_step.step == 2
     .row
       .col-3.m-2
         = Spade::Cell::Show.new(spade_form_step.model).to_div
     = f.input :product_name
-    = f.submit 'Ready'
+    = f.submit 'Ready', class: 'm-2 btn btn-info'
 
-= back_button
-= next_button
+.row.col-4
+  .col-6
+    = back_button
+  .col-6
+    = next_button

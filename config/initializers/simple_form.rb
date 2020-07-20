@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 #
 # Uncomment this and change the path if necessary to include your own
-# component.
+# components.
 # See https://github.com/heartcombo/simple_form#custom-components to know
-# more about custom component.
-# Dir[Rails.root.join('lib/component/**/*.rb')].each { |f| require f }
+# more about custom components.
+# Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 #
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  # Wrappers are used by the contract builder to generate a
+  # Wrappers are used by the form builder to generate a
   # complete input. You can remove any component from the
   # wrapper, change the order or even add your own to the
   # stack. The options given below are used to wrap the
@@ -122,7 +122,7 @@ SimpleForm.setup do |config|
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
 
-  # Tell browsers whether to use the native HTML5 validations (novalidate contract option).
+  # Tell browsers whether to use the native HTML5 validations (novalidate form option).
   # These validations are enabled in SimpleForm's internal config but disabled by default
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,

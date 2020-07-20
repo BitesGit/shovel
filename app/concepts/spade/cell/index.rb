@@ -19,5 +19,8 @@ module Spade::Cell
     def new_spade_link
       button_to 'New Spade', new_spade_path, method: :get, class: 'm-2 btn btn-info'
     end
+    def new_wizard_link
+      button_to 'Spade wizard', new_wizard_path, method: :get, class: 'm-2 btn btn-info'
+    end
   end
 end
