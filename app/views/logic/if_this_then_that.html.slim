@@ -1,5 +1,6 @@
 h5 Result
 p = @result
+p = @found
 p = @exception
 br
 .row
@@ -11,6 +12,8 @@ br
     = Component::Button::render(if_this_then_that_path('stone', 'exception'), 'Stone -> Exception')
   .col-2
     = Component::Button::render(if_this_then_that_path('bat', 'flap'), 'Bat -> --')
+  .col-2
+    = Component::Button::render(if_this_then_that_path('rex', 'extinct'), 'Rex -> --')
 .row
   .col-2
-    = Component::Button::render(spades_path, 'Spades')
+    = Component::Button::render(spades_path, 'Back to Spades')
