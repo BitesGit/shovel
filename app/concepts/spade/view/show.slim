@@ -1,8 +1,13 @@
 .col-3.m-2
-  .spade-measures
-    p = spade.product_name
+  .spade-container
+    = spade.product_name
+    - unless spade.cost.nil?
+      span.float-right = "#{spade.cost}€"
     = raw(to_div)
-  .spade-measures
-    = button_to 'edit', edit_spade_path(spade), method: :get
-    br
-    = button_to 'delete', spade_path(spade), method: :delete
+  .spade-container
+    .row
+      .col-6
+        = Component::Button::render(edit_spade_path(spade), 'edit')
+      .col-6
+        /= Component::Button::render(spade_path(spade), 'delete', 'delete')
+        = button_to 'Delete', spade_path(spade), method: :delete, class: 'm-2 btn btn-info'

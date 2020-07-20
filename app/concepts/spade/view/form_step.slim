@@ -1,4 +1,7 @@
 = simple_form_for(spade_form_step, as: :spade, url: wizard_form_url) do |f|
+  // This is simple and stupid way to define wizard step forms.
+    Another way is to define form per step, with Contract macro.
+    https://github.com/trailblazer/trailblazer-macro-contract
   - if spade_form_step.step == 0
     = f.input :color
     = f.input :width
