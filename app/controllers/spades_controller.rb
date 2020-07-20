@@ -105,9 +105,4 @@ class SpadesController < ApplicationController
     end
   end
 
-  private
-
-  def ctx
-    { params: params.to_unsafe_h }
-  end
 end

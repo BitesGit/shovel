@@ -1,0 +1,16 @@
+h5 Result
+p = @result
+p = @exception
+br
+.row
+  .col-2
+    = Component::Button::render(if_this_then_that_path('dog', 'bark'), 'Dog -> Bark')
+  .col-2
+    = Component::Button::render(if_this_then_that_path('cow', 'moo'), 'Cow -> Moo')
+  .col-2
+    = Component::Button::render(if_this_then_that_path('stone', 'exception'), 'Stone -> Exception')
+  .col-2
+    = Component::Button::render(if_this_then_that_path('bat', 'flap'), 'Bat -> --')
+.row
+  .col-2
+    = Component::Button::render(spades_path, 'Spades')

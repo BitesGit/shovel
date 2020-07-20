@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/spades/:id/wizard/:step' => 'spades#wizard_step', as: :wizard_step
   patch '/spades/:id/wizard/:step' => 'spades#wizard_save', as: :wizard_step_save
 
+  get '/logic/:this/then/:that' => 'logic#if_this_then_that', as: :if_this_then_that
+
   root to: 'spades#index'
 end
